@@ -1,8 +1,8 @@
-import renderer from "react-test-renderer";
+import { mount } from "enzyme";
 import Maaz from "./Maaz";
 import React from "react";
 
 it("snapshot testing", () => {
-  const tree = renderer.create(<Maaz />).toJSON();
+  const tree = mount(<Maaz />);
   expect(tree).toMatchSnapshot();
 });
